@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrasco do Tonhão - Reservas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+  // Verifica se o usuário está autenticado
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    // Redireciona para a página de login se não estiver autenticado
+    window.location.href = "login.html";
+  }
+</script>
+
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Reservas - Churrasco do Tonhão</h1>
+    </header>
+    <main>
+        <section id="reservas-section">
+            <h2>Reservas</h2>
+            <button id="fetch-reservas-btn">Carregar Reservas</button>
+            <table id="reservas-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Lugares</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas serão adicionadas dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
